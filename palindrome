@@ -15,7 +15,8 @@ public class Palindrom {
 			reverseNumber = reverseNumber * 10 + lastDigit ; 
 			temp /= 10;
 		}	
-		System.out.println(reverseNumber);
+		
+		
 		if (reverseNumber==n) {
 			System.out.println(n + " is a palindrome number ");
 		}
