@@ -96,7 +96,6 @@ public class Anagram2 {
 // instead of incrementing both arrays when a character was found, this time we only have an array so we will increment
 // that array al for one string, and decrement for another array ... and finally, check if these array is having 0 or not 
 
-// using only one array
 
 package arrays;
 
