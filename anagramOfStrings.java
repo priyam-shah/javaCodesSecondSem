@@ -46,8 +46,10 @@ public class AnagramOfString {
 }
 
 
-// method 2 ------------- using two arrays --- in one array lets say a iterate and find aski values of corrosponding characters 
-// .. with that values mark number of appearance of that character .. and finally compare two arrays 
+// method 2 ------------- using two arrays
+// in one array lets say a, iterate it and find ASCII values of the corresponding 
+// characters  .. with that values mark number of appearances of that character eg if A appears twice a[65]=2... 
+// and finally compare two arrays 
 
 package arrays;
 
@@ -90,5 +92,49 @@ public class Anagram2 {
 }
 
 
-// method-3 ------optimized version of send method --------
+// method-3 ------optimized version of the second method 
+// instead of incrementing both arrays when a character was found, this time we only have an array so we will increment
+// that array al for one string, and decrement for another array ... and finally, check if these array is having 0 or not 
+
+// using only one array
+
+package arrays;
+
+public class Anagram3 {
+	public static void main(String[] args) {
+		
+		boolean isAnagram = true ;
+		String a ="listen";
+		String b ="silent";
+		
+		int al[] = new int[256];
+		
+		for(char c: a.toCharArray()) {
+			int index= (int)c;
+			al[index]++;
+		}
+		
+		for(char c: b.toCharArray()) {
+			int index= (int)c;
+			al[index]--;
+		}
+		
+		 for(int i=0;i<256;i++) {
+			if(al[i] !=0) {
+				isAnagram =false;
+				break;
+			}
+		 }
+		
+		if(isAnagram) {
+			System.out.println("anagram");
+		}
+		
+		else {
+			System.out.println("not anagram");
+		}
+		
+	}
+}
+
 
