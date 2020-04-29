@@ -1,3 +1,6 @@
+this code is under development and help me to make it correct for n= 9,11,13 ...
+
+
 ***** pattern *****
 
 5
