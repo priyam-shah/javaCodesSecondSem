@@ -1,11 +1,24 @@
+***** pattern *****
+
+5
+
+1   A B C 
+2   D 
+3 4 * 6 7 
+    F   8 
+G H I   9
+
+
+
 package pkge;
 import java.util.Scanner;
-public class AdvancedPatternCont {
+public class AdvancedPattern {
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);
 		
 		int n = sc.nextInt();
 		int patternNumber = 1;
+		int patternAlpha = 65;
 		
 		for(int i=1 ; i<= (n/2)+1; i++){				
 			
@@ -19,7 +32,8 @@ public class AdvancedPatternCont {
 						System.out.print("  ");
 						}
 					else {
-						System.out.print("* ");
+						System.out.print((char)patternAlpha +" ");
+						patternAlpha++;
 						}
 					}
 					System.out.println();
@@ -30,6 +44,7 @@ public class AdvancedPatternCont {
 					if(j == n/2+1) {
 						System.out.print("* ");
 						patternNumber ++;
+						patternAlpha ++;
 					} else {
 						System.out.print(patternNumber + " ");
 						patternNumber++;
@@ -48,7 +63,8 @@ public class AdvancedPatternCont {
 						System.out.print("  ");
 						}
 					else if(j<= (n/2)+1 ) {
-						System.out.print("* ");
+						System.out.print( (char)patternAlpha +" ");
+						patternAlpha++;
 						}
 					}
 				System.out.println();
@@ -56,15 +72,45 @@ public class AdvancedPatternCont {
 		}
 		
 		for(int i= (n/2)+2 ; i<=n ; i++) { 
-			for(int j=1; j<= n-1 ; j++) {
-				System.out.print("  ");
+			
+			if(i == n) {
+				for(int j=1; j<= n ; j++ ){
+					
+					if(j ==n) {
+						System.out.print(patternNumber + " ");
+						patternNumber++;
+					}
+					else if(j<= (n/2)+1) {
+						System.out.print( (char)patternAlpha + " ");
+						patternAlpha++;
+						}
+					else {
+						System.out.print("  ");
+						}
+					}
+				}
+			else{
+				
+				for(int j=1; j<= n ; j++ ){
+					if(j ==n) {
+						System.out.print(patternNumber + " ");
+						patternNumber++;
+					}
+					
+					else if(j== (n/2)+1 ) {
+						System.out.print((char)patternAlpha+" ");
+						patternAlpha++;
+						}
+					else {
+						System.out.print("  ");
+						}
+					}
+				System.out.println();
 			}
 			
-			System.out.println(patternNumber);
-			patternNumber++;
+			
 		}
 		
 	}
 
 }
-
