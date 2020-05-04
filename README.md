@@ -13,6 +13,7 @@ all are worth seeing... but here are some good programs.... #featuredPrograms
 1) advancedPattern - pattern5.java
 2) reverseStringWordByWord.java
 3) anagramOfStrings.java
+4) min&maxSubstringOfAString.java
 
 
 ...still adding...
